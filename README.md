@@ -14,7 +14,9 @@ rails db:create db:migrate
 
 run rails server in terminal -  rails s
 
-run sidekiq server for processsing background jobs in new terminal-
+run sidekiq server for processsing background jobs-
+in project directory in new tab run-
+
 bundle exec sidekiq
 
 
