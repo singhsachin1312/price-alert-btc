@@ -1,0 +1,4 @@
+my_first_job:
+  cron: "*/05 * * * *"
+  class: "EmailAlertJob"
+  queue: default
