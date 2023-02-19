@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.4"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -45,13 +45,8 @@ gem 'jwt'
 gem 'bcrypt'
 gem 'kaminari'
 gem 'pg'
-# gem 'binance_api'
-# # gem 'binance-ruby'
-# gem 'websocket-client-simple'
-# gem 'eventmachine'
-# gem 'binance'
 gem 'httparty'
-gem 'sidekiq'
+gem 'sidekiq', "~> 6.5.8"
 gem "sidekiq-cron"
 
 

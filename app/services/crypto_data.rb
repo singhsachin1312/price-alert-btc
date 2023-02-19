@@ -6,7 +6,7 @@ class CryptoData
     if response.present?
       btc_data = response.select{|x| x['id'] == 'bitcoin'}
       Alert.created_alerts.each do |alert|
-        if alert.price.to_i == 2753 #btc_data[0]['current_price']
+        if alert.price.to_i == btc_data[0]['current_price']
           AlertMailer.alert_user(alert).deliver_now
         end
       end

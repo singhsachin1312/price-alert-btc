@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "5f2030d5-a2f3-4c7f-8fa9-5df3097653cf",
+		"name": "price alert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20775535"
+	},
+	"item": [
+		{
+			"name": "user create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"username\": \"test12\",\n    \"email\": \"testdemo111@yopmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"username\": \"test12\",\n    \"email\": \"testdemo111@yopmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5d8b2f7ebdd12992ad26a9c2bffe2a76\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "6e4e7453-b9d7-422e-a0b4-1de3bf9bf6d5"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.401842"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=17.00, start_processing.action_controller;dur=0.13, unpermitted_parameters.action_controller;dur=0.08, instantiation.active_record;dur=0.01, process_action.action_controller;dur=233.16"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 3,\n        \"name\": \"test\",\n        \"username\": \"test12\",\n        \"email\": \"testdemo111@yopmail.com\",\n        \"password_digest\": \"$2a$12$MDs8uvcZ7IyszVO0pElOG.rX/X28uqNXg3tDzWdFkZRgqJAIl2Qse\",\n        \"created_at\": \"2023-02-19T17:56:27.914Z\",\n        \"updated_at\": \"2023-02-19T17:56:27.914Z\",\n        \"alerts\": []\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzY5MTU3ODd9.FII5IyNowcYHilpnqRPvPomiwVcYBIY75vXl2SAFpoE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create alerts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzY5MTM4NzZ9.y1AHLC3H2Ro9JAeNSXrNDnPZ_qIbKJ4cRzYcBeHZSTc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": \"2759\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/alerts/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alerts",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create alerts",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzY5MTM4NzZ9.y1AHLC3H2Ro9JAeNSXrNDnPZ_qIbKJ4cRzYcBeHZSTc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": \"2759\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/alerts/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c8e796f1e8365cb6739e91f493da20f1\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "c2b4ce96-8631-42c7-863c-610cd6c80840"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.021973"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=8.87, instantiation.active_record;dur=0.06, unpermitted_parameters.action_controller;dur=0.07, process_action.action_controller;dur=18.07"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"price\": \"2759\",\n    \"status\": \"created\",\n    \"created_at\": \"2023-02-19T17:56:39.499Z\",\n    \"updated_at\": \"2023-02-19T17:56:39.499Z\",\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"test\",\n        \"username\": \"test12\",\n        \"email\": \"testdemo111@yopmail.com\",\n        \"password_digest\": \"$2a$12$oYsFd4JlKkcHQOP9LFEc5u./SH7u2N61uVxO/7fHycxCRgHjaWIAa\",\n        \"created_at\": \"2023-02-19T17:24:36.942Z\",\n        \"updated_at\": \"2023-02-19T17:24:36.942Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "alert delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzY5MTM4NzZ9.y1AHLC3H2Ro9JAeNSXrNDnPZ_qIbKJ4cRzYcBeHZSTc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"alert_id\": \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/alerts/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alerts",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "alert delete",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzY5MTM4NzZ9.y1AHLC3H2Ro9JAeNSXrNDnPZ_qIbKJ4cRzYcBeHZSTc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alert_id\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/alerts/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6ec9a70692b1c341da774af8b2859f89\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "b27df06f-299f-47cc-822f-486ad997d0ce"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.007470"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.12, sql.active_record;dur=1.43, instantiation.active_record;dur=0.19, process_action.action_controller;dur=4.56"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"status\": \"deleted\",\n        \"id\": 2,\n        \"price\": \"2753\",\n        \"created_at\": \"2023-02-19T17:25:21.105Z\",\n        \"updated_at\": \"2023-02-19T17:27:18.510Z\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"test\",\n            \"username\": \"test12\",\n            \"email\": \"testdemo111@yopmail.com\",\n            \"password_digest\": \"$2a$12$oYsFd4JlKkcHQOP9LFEc5u./SH7u2N61uVxO/7fHycxCRgHjaWIAa\",\n            \"created_at\": \"2023-02-19T17:24:36.942Z\",\n            \"updated_at\": \"2023-02-19T17:24:36.942Z\"\n        }\n    },\n    \"message\": \"Alert deleted successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "all user alerts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzY5MTM4NzZ9.y1AHLC3H2Ro9JAeNSXrNDnPZ_qIbKJ4cRzYcBeHZSTc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/alerts?page_no=1&status=created",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alerts"
+					],
+					"query": [
+						{
+							"key": "page_no",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "created",
+							"description": "possible values for filter created, triggered, deleted"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all user alerts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzY5MTM4NzZ9.y1AHLC3H2Ro9JAeNSXrNDnPZ_qIbKJ4cRzYcBeHZSTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/alerts?page_no=1&status=created",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alerts"
+							],
+							"query": [
+								{
+									"key": "page_no",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "created",
+									"description": "possible values for filter created, triggered, deleted"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b53fa21fd654d017389d971d87dd77e1\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "24638d77-3173-4df3-a436-560193288ebe"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.005732"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.09, sql.active_record;dur=1.38, instantiation.active_record;dur=0.17, process_action.action_controller;dur=3.97"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"price\": \"2752\",\n        \"status\": \"created\",\n        \"created_at\": \"2023-02-19T17:32:49.179Z\",\n        \"updated_at\": \"2023-02-19T17:32:49.179Z\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"test\",\n            \"username\": \"test12\",\n            \"email\": \"testdemo111@yopmail.com\",\n            \"password_digest\": \"$2a$12$oYsFd4JlKkcHQOP9LFEc5u./SH7u2N61uVxO/7fHycxCRgHjaWIAa\",\n            \"created_at\": \"2023-02-19T17:24:36.942Z\",\n            \"updated_at\": \"2023-02-19T17:24:36.942Z\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"price\": \"2759\",\n        \"status\": \"created\",\n        \"created_at\": \"2023-02-19T17:56:39.499Z\",\n        \"updated_at\": \"2023-02-19T17:56:39.499Z\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"test\",\n            \"username\": \"test12\",\n            \"email\": \"testdemo111@yopmail.com\",\n            \"password_digest\": \"$2a$12$oYsFd4JlKkcHQOP9LFEc5u./SH7u2N61uVxO/7fHycxCRgHjaWIAa\",\n            \"created_at\": \"2023-02-19T17:24:36.942Z\",\n            \"updated_at\": \"2023-02-19T17:24:36.942Z\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}

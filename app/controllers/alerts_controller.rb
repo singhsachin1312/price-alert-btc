@@ -15,7 +15,6 @@ class AlertsController < ApplicationController
 
   def create
     user = @current_user.alerts.create(alert_params)
-    BinanceApiJob.perform_now
     render json: user
   end
 
