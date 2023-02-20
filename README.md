@@ -10,6 +10,8 @@ Things you may want to cover:
 steps - 
 git clone 
 
+bundle install
+
 rails db:create db:migrate
 
 run rails server in terminal -  rails s
